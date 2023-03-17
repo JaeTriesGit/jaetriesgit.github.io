@@ -1,0 +1,168 @@
+$PaleBlue:hsl(225, 100%, 94%);
+$BrightBlue:hsl(245, 75%, 52%);
+$BrightBlueLess:hsl(245, 75%, 68%);
+$VeryPaleBlue:hsl(225, 100%, 98%);
+$DesaturatedBlue:hsl(224, 23%, 55%);
+$DarkBlue:hsl(223, 47%, 23%);
+$RedHat: "Red Hat Display", sans-serif;
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image:url(../../assets/ordersummary/pattern-background-desktop.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:$PaleBlue;
+    font-family:$RedHat;
+    text-align:center;
+}
+
+#MainFrame{
+    /*
+    display:flex;
+    gap:10px;
+    flex-direction:column;
+    align-items:center;*/
+    position:absolute;
+    max-width:400px;
+    max-height:600px;
+    width:90%;
+    height:100%;
+    background-color:white;
+    border-radius:12px;
+    overflow:hidden;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+#Hero{
+    width:100%;
+    height:50%;
+    max-height:220px;
+    object-fit:cover;
+}
+
+#FBox{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    gap:10px;
+    align-items:center;
+    height:60%;
+}
+
+#Title{
+    font-weight:900;
+}
+
+#Desc{
+    width:90%;
+    color:$DesaturatedBlue;
+}
+
+#AnnualPlan{
+
+    width:90%;
+    height:70px;
+    background-color:$VeryPaleBlue;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-radius:12px;
+
+    & img{
+        max-width:48px;
+        max-height:48px;
+    }
+
+    & #AnnualTitles{
+
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        width:100%;
+        height:100%;
+        align-self:flex-start;
+
+        & h1{
+            /*font-family:$RedHat;*/
+            font-weight:700;
+            /*height:50%;*/
+            font-size:1.75vh;
+        }
+
+        & p{
+            /*font-family:$RedHat;*/
+            font-weight:500;
+            color:$DesaturatedBlue;
+            /*height:50%;*/
+            font-size:15px;
+        }
+    }
+
+    & #AnnualLeft{
+        display:flex;
+        flex-direction:row;
+        justify-content:left;
+        align-items:center;
+        width:50%;
+        height:100%;
+    }
+
+    & #Change{
+        color:$BrightBlue;
+        font-weight:700;
+        text-decoration:underline;
+
+        &:hover{
+            text-decoration:none;
+            cursor:pointer;
+        }
+    }
+}
+
+#Payment{
+    width:90%;
+    height:50px;
+    background-color:$BrightBlue;
+    border-radius:12px;
+    border:0px;
+    color:$VeryPaleBlue;
+    font-weight:900;
+    font-size:1.7vh;
+    border-color:white;
+
+    &:hover{
+        background-color:$BrightBlueLess;
+        cursor:pointer;
+        box-shadow: 0px 5px 5px 1px $PaleBlue;
+    }
+}
+
+#Cancel{
+    width:40%;
+    height:5%;
+    font-weight:900;
+    background:none;
+    border:0px;
+    color:$DesaturatedBlue;
+
+    &:hover{
+        color:$DarkBlue;
+        cursor:pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        background-image:url(../../assets/ordersummary/pattern-background-mobile.svg)
+    }
+
+    #Payment{
+        font-size:2vh;
+    }
+}
