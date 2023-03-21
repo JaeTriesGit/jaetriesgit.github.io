@@ -9,7 +9,7 @@ body {
 
 #TopBar {
   position: sticky;
-  top: 0;
+  top: 5px;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -121,6 +121,8 @@ body {
       transition: .5s;
       /*How long it takes to transition the hover func*/ }
       .work #FrontEnd div h1 {
+        font-size: 14px; }
+      .work #FrontEnd div #WorkTitle {
         font-size: 15px;
         position: relative; }
       .work #FrontEnd div img {
@@ -151,11 +153,23 @@ body {
     text-align: center; }
 
   .work {
-    width: 95%; }
+    width: 95%;
+    height: 1000px; }
+    .work #FrontEnd {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 1000px;
+      gap: 25px; }
+    .work h1 {
+      font-size: 14px; }
+    .work #WorkTitle {
+      height: 50px;
+      font-size: 20px;
+      text-align: center; }
 
   .aboutme h1 {
     font-size: 20px; }
   .aboutme p {
-    font-size: 15px; } }
+    font-size: 12px; } }
 
 /*# sourceMappingURL=style.css.map */

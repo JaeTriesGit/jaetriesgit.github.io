@@ -15,7 +15,7 @@ body {
 
 #TopBar {
     position:sticky;
-    top: 0;
+    top: 5px;
     display:flex;
     flex-direction:row;
     justify-content:left;
@@ -156,6 +156,10 @@ body {
             transition:.5s; /*How long it takes to transition the hover func*/
 
             & h1{
+                font-size:14px;
+            }
+
+            & #WorkTitle{
                 font-size:15px;
                 position:relative;
             }
@@ -197,6 +201,24 @@ body {
 
     .work{
         width:95%;
+        height:1000px;
+
+        & #FrontEnd{
+            flex-direction:column;
+            justify-content:flex-start;
+            height:1000px;
+            gap:25px;
+        }
+
+        & h1{
+            font-size:14px;
+        }
+
+        & #WorkTitle{
+            height:50px;
+            font-size:20px;
+            text-align:center;
+        }
     }
 
     .aboutme{
@@ -205,7 +227,7 @@ body {
         }
 
         & p{
-            font-size:15px;
+            font-size:12px;
         }
     }
 }
