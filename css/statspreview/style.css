@@ -104,6 +104,10 @@ body {
     gap: 5px;
     margin: 0;
     height: 40%; }
+    #Stats h1 {
+      font-size: 20px; }
+    #Stats p {
+      font-size: 14px; }
 
   #MainFrame {
     position: absolute;
@@ -124,17 +128,14 @@ body {
   #Text1 {
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 15px; }
+    padding-top: 15px;
+    font-size: 20px; }
 
   #Text2 {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 15px;
-    padding-bottom: 10px; } }
-@media screen and (max-height: 720px) {
-  #Stats h1 {
-    font-size: 20px; }
-  #Stats p {
+    padding-bottom: 10px;
     font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */
