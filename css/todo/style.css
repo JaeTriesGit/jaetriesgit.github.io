@@ -1,0 +1,211 @@
+body {
+  background-image: url("./Assets/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%, 100px;
+  background-color: hsl(240deg, 12%, 11%);
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#TodoTitle {
+  letter-spacing: 15px;
+  color: white;
+  font-size: 50px;
+}
+
+#TopBar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+@media (min-width: 1440px) {
+  #TopBar {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#mode {
+  width: 50px;
+  height: 50px;
+}
+#mode:hover {
+  -webkit-animation: spin 1s ease-in-out 1;
+          animation: spin 1s ease-in-out 1;
+  cursor: pointer;
+}
+
+#AddBar {
+  width: 90%;
+  height: 60px;
+  border-radius: 6px;
+  background-color: hsl(235deg, 24%, 19%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px hsl(235deg, 21%, 11%);
+}
+@media (min-width: 1440px) {
+  #AddBar {
+    width: 50%;
+  }
+}
+
+#UserInput {
+  width: 90%;
+  height: 40px;
+  background-color: hsl(235deg, 24%, 19%);
+  font-size: 18px;
+  color: hsl(233deg, 14%, 35%);
+  font-family: "Josefin Sans", sans-serif;
+  border-style: hidden;
+  caret-color: blue;
+  outline: none;
+}
+
+#Checkbox {
+  width: 30px;
+  height: 30px;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(233deg, 14%, 35%);
+}
+#Checkbox:hover {
+  cursor: pointer;
+}
+
+#CheckboxImg {
+  opacity: 1;
+  visibility: hidden;
+  background-image: none;
+  background: none;
+  border-radius: 36px;
+}
+
+#MainFrame {
+  width: 90%;
+  height: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px hsl(235deg, 21%, 11%);
+}
+@media (min-width: 1440px) {
+  #MainFrame {
+    width: 50%;
+  }
+}
+
+#Template {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  background-color: hsl(235deg, 24%, 19%);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: hsl(237deg, 14%, 26%);
+}
+#Template p {
+  text-align: left;
+  font-weight: 400;
+  width: 80%;
+  color: hsl(0deg, 0%, 98%);
+  font-size: 18px;
+}
+
+.CheckboxBackground {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(235deg, 24%, 19%);
+  border-radius: 100%;
+}
+
+#Bottom {
+  color: hsl(233deg, 14%, 35%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(235deg, 24%, 19%);
+  order: 5000;
+}
+
+#Control {
+  display: none;
+}
+@media (min-width: 1440px) {
+  #Control {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.Tab {
+  color: hsl(233deg, 14%, 35%);
+}
+.Tab:hover {
+  cursor: pointer;
+}
+
+#Control-Clear:hover {
+  cursor: pointer;
+}
+
+.Preset {
+  color: hsl(220deg, 98%, 61%);
+}
+
+#Bottom-Mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  width: 90%;
+  height: 60px;
+  background-color: hsl(235deg, 24%, 19%);
+  box-shadow: 0 5px 10px hsl(235deg, 21%, 11%);
+}
+@media (min-width: 1440px) {
+  #Bottom-Mobile {
+    display: none;
+  }
+}
+
+#Delete:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

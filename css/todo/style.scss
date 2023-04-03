@@ -1,0 +1,232 @@
+$BrightBlue:hsl(220, 98%, 61%);
+$ColorPicker: hsl(0, 0%, 100%);
+//Light
+$VLG:hsl(0, 0%, 98%);
+$VLGB:hsl(236, 33%, 92%);
+$LGB:hsl(233, 11%, 84%);
+$DGB:hsl(236, 9%, 61%);
+$VDGB:hsl(235, 19%, 35%);
+//Dark
+$VDB:hsl(235, 21%, 11%);
+$VDDB:hsl(235, 24%, 19%);
+$LiGB:hsl(234, 39%, 85%);
+$HoverStateDark:hsl(236, 33%, 92%);
+$DaGB:hsl(234, 11%, 52%);
+$VeDGB:hsl(233, 14%, 35%);
+$VeDGB2:hsl(237, 14%, 26%);
+//Gradient
+$Grad:linear-gradient(135deg,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+//Font
+$Jos:"Josefin Sans", sans-serif;
+
+@mixin desktop {
+    @media (min-width:1440px) {
+        @content;
+    }
+}
+
+body{
+    background-image: url("./Assets/bg-desktop-dark.jpg");
+    background-repeat:no-repeat;
+    background-size:100%, 100px;
+    background-color: hsl(240, 12%, 11%);
+    font-family:$Jos;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    gap:20px;
+};
+
+#TodoTitle{
+    letter-spacing:15px;
+    color:white;
+    font-size:50px;
+};
+
+#TopBar{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items:center;
+    width:90%;
+    height:90%;
+
+    @include desktop{
+        width:50%;
+        height:50%;
+    }
+};
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    } to {
+        transform:rotate(360deg);
+    }
+}
+
+#mode{
+    width:50px;
+    height:50px;
+
+    &:hover{
+        animation:spin 1s ease-in-out 1;
+        cursor:pointer;
+    }
+};
+
+#AddBar{
+    width:90%;
+    height:60px;
+    border-radius:6px;
+    background-color:$VDDB;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    box-shadow:0 5px 10px $VDB;
+
+    @include desktop{
+        width:50%;
+    }
+};
+
+#UserInput{
+    width:90%;
+    height:40px;
+    background-color:$VDDB;
+    font-size:18px;
+    color:$VeDGB;
+    font-family:$Jos;
+    border-style:hidden;
+    caret-color:blue;
+    outline:none;
+};
+
+#Checkbox{
+    width:30px;
+    height:30px;
+    border-radius:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:$VeDGB;
+    &:hover{
+        cursor:pointer;
+    }
+};
+
+#CheckboxImg{
+    //width:80%;
+    //height:80%;
+    opacity:1;
+    //border-width:3px;
+    //border-style:solid;
+    visibility: hidden;
+    background-image:none;
+    background:none;
+    border-radius:36px;
+}
+
+#MainFrame{
+    width:90%;
+    height:auto;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 5px 10px $VDB;
+    @include desktop{
+        width:50%;
+    }
+};
+
+#Template{
+    display:none;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    width:100%;
+    height:60px;
+    background-color:$VDDB;
+    border-bottom-width:2px;
+    border-bottom-style:solid;
+    border-bottom-color:$VeDGB2;
+
+    & p{
+        text-align:left;
+        font-weight:400;
+        width:80%;
+        color:$VLG;
+        font-size:18px;
+    }
+};
+
+.CheckboxBackground{
+    width:80%;
+    height:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:$VDDB;
+    border-radius:100%;
+}
+
+#Bottom{
+    color:$VeDGB;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    background-color:$VDDB;
+    order:5000;
+};
+
+#Control{
+    display:none;
+
+    @include desktop{
+        width:30%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+    }
+}
+
+.Tab{
+    color:hsl(233, 14%, 35%);
+    &:hover{
+        cursor:pointer;
+    }
+};
+
+#Control-Clear{
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+.Preset{
+    color:hsl(220, 98%, 61%); //start with blue color on the "all" tab
+}
+
+#Bottom-Mobile{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    border-radius:10px;
+    width:90%;
+    height:60px;
+    background-color:$VDDB;
+    box-shadow:0 5px 10px $VDB;
+
+    @include desktop{
+        display:none;
+    }
+}
+
+#Delete{
+    &:hover{
+        cursor:pointer;
+    }
+};

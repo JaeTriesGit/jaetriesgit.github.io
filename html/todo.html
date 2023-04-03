@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link href="../css/todo/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="TopBar">
+        <h1 id="TodoTitle">TODO</h1>
+        <img id="mode" onclick="ChangeMode()" src="./Assets/icon-sun.svg">
+    </div>
+
+    <div id="AddBar" class='BG'>
+        <div id="Checkbox">
+            <div class="CheckboxBackground BG"></div>
+        </div>
+        <input id="UserInput" class='BG' type="text"onfocus="InputStart(this)" placeholder="Create a new todo...">
+    </div>
+
+    <div id="MainFrame">
+
+        <div id="AllToDos">
+
+            <div id="Template" class="Item BG" value="0">
+                <div id="Checkbox">
+                    <div class="CheckboxBackground BG">
+                        <img id="CheckboxImg" class="Checkbox" alt="x" src="Assets/icon-check.svg">
+                    </div>
+                </div>
+                <p class='TP'>Test Paragraph</p>
+                <img id="Delete" class="del"src="./Assets/icon-cross.svg">
+            </div>
+            
+        </div>
+
+        <div id="Bottom" class='BG'>
+            <p id="Items-Left">0 items left</p>
+            <div id="Control">
+                <p class="Tab Preset" value="All">All</p>
+                <p class="Tab" value="Active">Active</p>
+                <p class="Tab" value="Completed">Completed</p>
+            </div>
+            <p id="Control-Clear"onclick="DeleteCompleted()">Clear Completed</p>
+        </div>
+        
+    </div>
+
+    <div id='Bottom-Mobile' class='BG'>
+        <p class='Tab Preset' value='All'>All</p>
+        <p class='Tab' value='Active'>Active</p>
+        <p class='Tab' value='Completed'>Completed</p>
+    </div>
+</body>
+<script src="../js/todo.js"></script>
