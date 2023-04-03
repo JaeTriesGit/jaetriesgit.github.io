@@ -1,5 +1,5 @@
 body {
-  background-image: url("./Assets/bg-desktop-dark.jpg");
+  background-image: url("../assets/todo/bg-desktop-dark.jpg");
   background-repeat: no-repeat;
   background-size: 100%, 100px;
   background-color: hsl(240deg, 12%, 11%);

@@ -1,14 +1,16 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   background-image: url(../../assets/ordersummary/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #e0e8ff;
+  background-color: hsl(225deg, 100%, 94%);
   font-family: "Red Hat Display", sans-serif;
-  text-align: center; }
+  text-align: center;
+}
 
 #MainFrame {
   /*
@@ -26,13 +28,16 @@ body {
   overflow: hidden;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+}
 
 #Hero {
   width: 100%;
   height: 50%;
   max-height: 220px;
-  object-fit: cover; }
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 #FBox {
   display: flex;
@@ -40,73 +45,86 @@ body {
   justify-content: space-evenly;
   gap: 10px;
   align-items: center;
-  height: 60%; }
+  height: 60%;
+}
 
 #Title {
-  font-weight: 900; }
+  font-weight: 900;
+}
 
 #Desc {
   width: 90%;
-  color: #7280a7; }
+  color: hsl(224deg, 23%, 55%);
+}
 
 #AnnualPlan {
   width: 90%;
   height: 70px;
-  background-color: #f5f7ff;
+  background-color: hsl(225deg, 100%, 98%);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 12px; }
-  #AnnualPlan img {
-    max-width: 48px;
-    max-height: 48px; }
-  #AnnualPlan #AnnualTitles {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-self: flex-start; }
-    #AnnualPlan #AnnualTitles h1 {
-      /*font-family:$RedHat;*/
-      font-weight: 700;
-      /*height:50%;*/
-      font-size: 1.75vh; }
-    #AnnualPlan #AnnualTitles p {
-      /*font-family:$RedHat;*/
-      font-weight: 500;
-      color: #7280a7;
-      /*height:50%;*/
-      font-size: 15px; }
-  #AnnualPlan #AnnualLeft {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: 50%;
-    height: 100%; }
-  #AnnualPlan #Change {
-    color: #3829e0;
-    font-weight: 700;
-    text-decoration: underline; }
-    #AnnualPlan #Change:hover {
-      text-decoration: none;
-      cursor: pointer; }
+  border-radius: 12px;
+}
+#AnnualPlan img {
+  max-width: 48px;
+  max-height: 48px;
+}
+#AnnualPlan #AnnualTitles {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-self: flex-start;
+}
+#AnnualPlan #AnnualTitles h1 {
+  /*font-family:$RedHat;*/
+  font-weight: 700;
+  /*height:50%;*/
+  font-size: 1.75vh;
+}
+#AnnualPlan #AnnualTitles p {
+  /*font-family:$RedHat;*/
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+  /*height:50%;*/
+  font-size: 15px;
+}
+#AnnualPlan #AnnualLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+#AnnualPlan #Change {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: 700;
+  text-decoration: underline;
+}
+#AnnualPlan #Change:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 #Payment {
   width: 90%;
   height: 50px;
-  background-color: #3829e0;
+  background-color: hsl(245deg, 75%, 52%);
   border-radius: 12px;
   border: 0px;
-  color: #f5f7ff;
+  color: hsl(225deg, 100%, 98%);
   font-weight: 900;
   font-size: 1.7vh;
-  border-color: white; }
-  #Payment:hover {
-    background-color: #7a70eb;
-    cursor: pointer;
-    box-shadow: 0px 5px 5px 1px #e0e8ff; }
+  border-color: white;
+}
+#Payment:hover {
+  background-color: hsl(245deg, 75%, 68%);
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 1px hsl(225deg, 100%, 94%);
+}
 
 #Cancel {
   width: 40%;
@@ -114,16 +132,18 @@ body {
   font-weight: 900;
   background: none;
   border: 0px;
-  color: #7280a7; }
-  #Cancel:hover {
-    color: #1f2f56;
-    cursor: pointer; }
+  color: hsl(224deg, 23%, 55%);
+}
+#Cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+  cursor: pointer;
+}
 
 @media screen and (max-width: 768px) {
   body {
-    background-image: url(../../assets/ordersummary/pattern-background-mobile.svg); }
-
+    background-image: url(../../assets/ordersummary/pattern-background-mobile.svg);
+  }
   #Payment {
-    font-size: 2vh; } }
-
-/*# sourceMappingURL=style.css.map */
+    font-size: 2vh;
+  }
+}/*# sourceMappingURL=style.css.map */
